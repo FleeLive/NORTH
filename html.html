@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NØRTH Live Studios</title>
+  <style>
+    /* Reset & basic styles */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Inter', sans-serif; background-color: #0B0E11; color: #F4F6F8; line-height: 1.6; }
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; display: block; }
+
+    /* Header */
+    header { background-color: #0B0E11; padding: 2rem; text-align: center; border-bottom: 1px solid #8A9199; }
+    header h1 { font-size: 3rem; letter-spacing: 0.1em; }
+    header p { font-size: 1.2rem; color: #8A9199; margin-top: 0.5rem; }
+
+    /* Navigation */
+    nav { margin-top: 1rem; }
+    nav a { margin: 0 1rem; font-weight: 600; color: #F4F6F8; transition: 0.2s; }
+    nav a:hover { color: #00BFFF; }
+
+    /* Sections */
+    section { padding: 4rem 2rem; max-width: 1200px; margin: auto; }
+    section h2 { font-size: 2rem; margin-bottom: 1rem; color: #00BFFF; }
+    section p { margin-bottom: 1rem; }
+
+    /* Cards */
+    .card-container { display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center; }
+    .card { background-color: #121519; border-radius: 10px; padding: 2rem; flex: 1 1 300px; min-width: 280px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); transition: transform 0.2s; }
+    .card:hover { transform: translateY(-5px); }
+    .card h3 { margin-bottom: 1rem; color: #00BFFF; }
+    .card p { color: #D1D5DB; }
+
+    /* Footer */
+    footer { text-align: center; padding: 2rem; font-size: 0.9rem; color: #8A9199; border-top: 1px solid #8A9199; margin-top: 4rem; }
+    
+    /* Responsive */
+    @media(max-width: 768px){ .card-container { flex-direction: column; align-items: center; } }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>NØRTH Live Studios</h1>
+    <p>Live-first media. Precision in motion.</p>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#productions">Productions</a>
+      <a href="#divisions">Divisions</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2>About NØRTH Live Studios</h2>
+    <p>NØRTH Live Studios is a Calgary-based live-production media company specializing in real-time broadcast experiences, multi-feed operations, and immersive storytelling. Our mission is to deliver live productions that feel immediate, authentic, and technically uncompromising.</p>
+    <p>Rooted in the ethos of Canada's True North, we combine broadcast professionalism with cutting-edge technology to produce high-quality live content across multiple platforms.</p>
+  </section>
+
+  <!-- Productions Section -->
+  <section id="productions">
+    <h2>Our Productions</h2>
+    <div class="card-container">
+      <div class="card">
+        <h3>San Andreas LIVE</h3>
+        <p>A live-action roleplay broadcast capturing real-time events in Los Santos. Fully produced and presented by NØRTH Live Studios.</p>
+      </div>
+      <div class="card">
+        <h3>Los Santos 25 News</h3>
+        <p>A modern, fast-paced news division covering breaking events, investigative reporting, and local news in Los Santos.</p>
+      </div>
+      <div class="card">
+        <h3>Special Event Coverage</h3>
+        <p>Live coverage of major events, summits, and community operations, leveraging our advanced control systems and multi-feed capabilities.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Divisions Section -->
+  <section id="divisions">
+    <h2>Divisions</h2>
+    <div class="card-container">
+      <div class="card">
+        <h3>NØRTH Live</h3>
+        <p>Our live broadcast division powering San Andreas LIVE and other flagship shows. Precision live production is our standard.</p>
+      </div>
+      <div class="card">
+        <h3>NØRTH 25</h3>
+        <p>The news & current events division, producing Los Santos 25 News and other news-oriented content.</p>
+      </div>
+      <div class="card">
+        <h3>NØRTH CTRL</h3>
+        <p>Technical operations, control rooms, multi-feed routing, and OBS systems management. Ensuring every live signal is perfect.</p>
+      </div>
+      <div class="card">
+        <h3>NØRTH Studio</h3>
+        <p>Creative production hub for all our projects, from concept to broadcast-ready delivery.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>For collaborations, broadcast inquiries, or production requests, contact us at:</p>
+    <p><strong>Email:</strong> info@northandstudios.com</p>
+    <p><strong>Location:</strong> Calgary, Alberta, Canada</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 NØRTH Live Studios. All rights reserved. <br>
+    Live-first media. Precision in motion.
+  </footer>
+
+</body>
+</html>
