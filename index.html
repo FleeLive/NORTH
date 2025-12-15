@@ -4,45 +4,45 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NØRTH Live Studios</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    /* Reset & basic styles */
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Inter', sans-serif; background-color: #0B0E11; color: #F4F6F8; line-height: 1.6; }
-    a { text-decoration: none; color: inherit; }
-    img { max-width: 100%; display: block; }
+    /* Reset */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; background-color: #0B0E11; color: #F4F6F8; line-height: 1.6; scroll-behavior: smooth; }
 
-    /* Header */
-    header { background-color: #0B0E11; padding: 2rem; text-align: center; border-bottom: 1px solid #8A9199; }
-    header h1 { font-size: 3rem; letter-spacing: 0.1em; }
-    header p { font-size: 1.2rem; color: #8A9199; margin-top: 0.5rem; }
-
-    /* Navigation */
-    nav { margin-top: 1rem; }
-    nav a { margin: 0 1rem; font-weight: 600; color: #F4F6F8; transition: 0.2s; }
-    nav a:hover { color: #00BFFF; }
+    /* Header / Hero */
+    header { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; background: linear-gradient(135deg,#0B0E11,#121519); }
+    header h1 { font-size: 4rem; letter-spacing: 0.1em; color: #00BFFF; margin-bottom: 1rem; }
+    header p { font-size: 1.5rem; color: #8A9199; margin-bottom: 2rem; }
+    nav { display: flex; gap: 2rem; }
+    nav a { color: #F4F6F8; font-weight: 600; transition: 0.2s; border-bottom: 2px solid transparent; padding-bottom: 2px; }
+    nav a:hover { border-bottom: 2px solid #00BFFF; color: #00BFFF; }
 
     /* Sections */
-    section { padding: 4rem 2rem; max-width: 1200px; margin: auto; }
-    section h2 { font-size: 2rem; margin-bottom: 1rem; color: #00BFFF; }
-    section p { margin-bottom: 1rem; }
+    section { padding: 5rem 2rem; max-width: 1200px; margin: auto; }
+    section h2 { font-size: 2.5rem; margin-bottom: 2rem; background: linear-gradient(90deg, #00BFFF, #1DE9B6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    section p { margin-bottom: 1rem; color: #D1D5DB; }
 
-    /* Cards */
-    .card-container { display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center; }
-    .card { background-color: #121519; border-radius: 10px; padding: 2rem; flex: 1 1 300px; min-width: 280px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); transition: transform 0.2s; }
-    .card:hover { transform: translateY(-5px); }
+    /* Card layout */
+    .card-container { display: grid; grid-template-columns: repeat(auto-fit,minmax(300px,1fr)); gap: 2rem; }
+    .card { background: #121519; border-radius: 12px; padding: 2rem; box-shadow: 0 8px 20px rgba(0,0,0,0.5); transition: transform 0.3s, box-shadow 0.3s; }
+    .card:hover { transform: translateY(-10px); box-shadow: 0 12px 28px rgba(0,0,0,0.6); }
     .card h3 { margin-bottom: 1rem; color: #00BFFF; }
     .card p { color: #D1D5DB; }
 
     /* Footer */
-    footer { text-align: center; padding: 2rem; font-size: 0.9rem; color: #8A9199; border-top: 1px solid #8A9199; margin-top: 4rem; }
-    
-    /* Responsive */
-    @media(max-width: 768px){ .card-container { flex-direction: column; align-items: center; } }
+    footer { text-align: center; padding: 3rem 1rem; font-size: 0.9rem; color: #8A9199; border-top: 1px solid #8A9199; }
+
+    /* Smooth image hover */
+    img { border-radius: 10px; transition: transform 0.3s; }
+    img:hover { transform: scale(1.05); }
+
+    @media(max-width:768px){ header h1{font-size:3rem;} header p{font-size:1.2rem;} }
   </style>
 </head>
 <body>
 
-  <!-- Header -->
+  <!-- Hero -->
   <header>
     <h1>NØRTH Live Studios</h1>
     <p>Live-first media. Precision in motion.</p>
@@ -54,59 +54,59 @@
     </nav>
   </header>
 
-  <!-- About Section -->
+  <!-- About -->
   <section id="about">
-    <h2>About NØRTH Live Studios</h2>
-    <p>NØRTH Live Studios is a Calgary-based live-production media company specializing in real-time broadcast experiences, multi-feed operations, and immersive storytelling. Our mission is to deliver live productions that feel immediate, authentic, and technically uncompromising.</p>
-    <p>Rooted in the ethos of Canada's True North, we combine broadcast professionalism with cutting-edge technology to produce high-quality live content across multiple platforms.</p>
+    <h2>About Us</h2>
+    <p>NØRTH Live Studios is a Calgary-based live-production media company specializing in real-time broadcast experiences, multi-feed operations, and immersive storytelling.</p>
+    <p>Our mission is to deliver live productions that feel immediate, authentic, and technically uncompromising, while embodying the disciplined precision of Canada's True North.</p>
   </section>
 
-  <!-- Productions Section -->
+  <!-- Productions -->
   <section id="productions">
     <h2>Our Productions</h2>
     <div class="card-container">
       <div class="card">
         <h3>San Andreas LIVE</h3>
-        <p>A live-action roleplay broadcast capturing real-time events in Los Santos. Fully produced and presented by NØRTH Live Studios.</p>
+        <p>A flagship live-action roleplay broadcast capturing real-time events in Los Santos. Fully produced by NØRTH Live Studios.</p>
       </div>
       <div class="card">
         <h3>Los Santos 25 News</h3>
-        <p>A modern, fast-paced news division covering breaking events, investigative reporting, and local news in Los Santos.</p>
+        <p>Modern, fast-paced news coverage including breaking events, investigative stories, and local reporting in Los Santos.</p>
       </div>
       <div class="card">
         <h3>Special Event Coverage</h3>
-        <p>Live coverage of major events, summits, and community operations, leveraging our advanced control systems and multi-feed capabilities.</p>
+        <p>Live coverage of major events, summits, and community operations using advanced control systems and multi-feed broadcasting.</p>
       </div>
     </div>
   </section>
 
-  <!-- Divisions Section -->
+  <!-- Divisions -->
   <section id="divisions">
-    <h2>Divisions</h2>
+    <h2>Our Divisions</h2>
     <div class="card-container">
       <div class="card">
         <h3>NØRTH Live</h3>
-        <p>Our live broadcast division powering San Andreas LIVE and other flagship shows. Precision live production is our standard.</p>
+        <p>Live broadcast division powering all flagship shows. Precision and control in every broadcast.</p>
       </div>
       <div class="card">
         <h3>NØRTH 25</h3>
-        <p>The news & current events division, producing Los Santos 25 News and other news-oriented content.</p>
+        <p>News and current events division producing Los Santos 25 News and other journalistic content.</p>
       </div>
       <div class="card">
         <h3>NØRTH CTRL</h3>
-        <p>Technical operations, control rooms, multi-feed routing, and OBS systems management. Ensuring every live signal is perfect.</p>
+        <p>Technical operations, multi-feed routing, OBS systems, and control room management.</p>
       </div>
       <div class="card">
         <h3>NØRTH Studio</h3>
-        <p>Creative production hub for all our projects, from concept to broadcast-ready delivery.</p>
+        <p>Creative hub where all concepts, production design, and content creation come to life.</p>
       </div>
     </div>
   </section>
 
-  <!-- Contact Section -->
+  <!-- Contact -->
   <section id="contact">
-    <h2>Contact Us</h2>
-    <p>For collaborations, broadcast inquiries, or production requests, contact us at:</p>
+    <h2>Contact</h2>
+    <p>Collaborations, broadcast inquiries, or production requests:</p>
     <p><strong>Email:</strong> info@northandstudios.com</p>
     <p><strong>Location:</strong> Calgary, Alberta, Canada</p>
   </section>
