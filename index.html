@@ -12,7 +12,8 @@
 
     /* Header / Hero */
     header { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; background: linear-gradient(135deg,#0B0E11,#121519); }
-    header h1 { font-size: 4rem; letter-spacing: 0.1em; color: #00BFFF; margin-bottom: 1rem; }
+    header img { max-width: 250px; margin-bottom: 1rem; }
+    header h1 { font-size: 4rem; letter-spacing: 0.1em; color: #00BFFF; margin-bottom: 0.5rem; }
     header p { font-size: 1.5rem; color: #8A9199; margin-bottom: 2rem; }
     nav { display: flex; gap: 2rem; }
     nav a { color: #F4F6F8; font-weight: 600; transition: 0.2s; border-bottom: 2px solid transparent; padding-bottom: 2px; }
@@ -25,17 +26,14 @@
 
     /* Card layout */
     .card-container { display: grid; grid-template-columns: repeat(auto-fit,minmax(300px,1fr)); gap: 2rem; }
-    .card { background: #121519; border-radius: 12px; padding: 2rem; box-shadow: 0 8px 20px rgba(0,0,0,0.5); transition: transform 0.3s, box-shadow 0.3s; }
+    .card { background: #121519; border-radius: 12px; padding: 2rem; box-shadow: 0 8px 20px rgba(0,0,0,0.5); transition: transform 0.3s, box-shadow 0.3s; display: flex; flex-direction: column; align-items: center; text-align: center; }
     .card:hover { transform: translateY(-10px); box-shadow: 0 12px 28px rgba(0,0,0,0.6); }
+    .card img { max-width: 150px; margin-bottom: 1rem; }
     .card h3 { margin-bottom: 1rem; color: #00BFFF; }
     .card p { color: #D1D5DB; }
 
     /* Footer */
     footer { text-align: center; padding: 3rem 1rem; font-size: 0.9rem; color: #8A9199; border-top: 1px solid #8A9199; }
-
-    /* Smooth image hover */
-    img { border-radius: 10px; transition: transform 0.3s; }
-    img:hover { transform: scale(1.05); }
 
     @media(max-width:768px){ header h1{font-size:3rem;} header p{font-size:1.2rem;} }
   </style>
@@ -44,6 +42,8 @@
 
   <!-- Hero -->
   <header>
+    <!-- Main NØRTH Logo -->
+    <img src="assets/PrimaryLogo.jpg" alt="NØRTH Live Studios Logo">
     <h1>NØRTH Live Studios</h1>
     <p>Live-first media. Precision in motion.</p>
     <nav>
@@ -51,7 +51,7 @@
       <a href="#productions">Productions</a>
       <a href="#divisions">Divisions</a>
       <a href="#contact">Contact</a>
-    </nav>
+    </nav> 
   </header>
 
   <!-- About -->
@@ -66,10 +66,14 @@
     <h2>Our Productions</h2>
     <div class="card-container">
       <div class="card">
+        <!-- Logo for San Andreas LIVE -->
+        <img src="assets/sal3_whiteoutline.png" alt="San Andreas LIVE Logo">
         <h3>San Andreas LIVE</h3>
         <p>A flagship live-action roleplay broadcast capturing real-time events in Los Santos. Fully produced by NØRTH Live Studios.</p>
       </div>
       <div class="card">
+        <!-- Logo for Los Santos 25 News -->
+        <img src="assets/LS_NEWS_LOGO_28" alt="Los Santos 25 News Logo">
         <h3>Los Santos 25 News</h3>
         <p>Modern, fast-paced news coverage including breaking events, investigative stories, and local reporting in Los Santos.</p>
       </div>
